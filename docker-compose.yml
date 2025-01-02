@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  bot:
+    build: .
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - DB_PATH=${DB_PATH}
+      - ADMIN_ID=${ADMIN_ID}
+    env_file:
+      - .env
+    restart: always
